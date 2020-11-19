@@ -1,0 +1,26 @@
+def selection_sort(alist):
+    for i in range(0, len(alist) - 1):
+        smallest = i
+        for j in range(i + 1, len(alist)):
+            if alist[j] < alist[smallest]:
+                smallest = j
+        alist[i], alist[smallest] = alist[smallest], alist[i]
+ 
+ 
+alist = input('Enter the list of numbers: ').split()
+alist = [int(x) for x in alist]
+selection_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+output-
+Case 1:
+Enter the list of numbers: 3 1 4 5 2 6
+Sorted list: [1, 2, 3, 4, 5, 6]
+ 
+Case 2:
+Enter the list of numbers: 2 10 5 38 1 7
+Sorted list: [1, 2, 5, 7, 10, 38]
+ 
+Case 3:
+Enter the list of numbers: 5 3 2 1 0
+Sorted list: [0, 1, 2, 3, 5]
